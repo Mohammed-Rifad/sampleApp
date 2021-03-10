@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<form method="POST" action="/update/{{employee.id}}">
+{% csrf_token %}
+<h1>Update details</h1>
+<br>
+<table>
+<tr><td>Employee Id:</td><td><input type="text" name="eid" value="{{ employee.eid }}"/>  </td></tr>
+<tr><td>Employee Name:</td><td><input type="text" name="ename"  value="{{ employee.ename }}" /> </td></tr>
+<tr><td>Employee Email:</td><td><input type="email" name="eemail" value="{{ employee.eemail }}"/></td></tr>
+<tr><td>Employee Contact:</td><td><input type="text" name="econtact" value="{{ employee.econtact }}" /></td></tr>
+<tr><td></td></tr>
+<tr><td><input type="submit" value="Update"></td></tr>
+</table>
+</form>
+</body>
+</html>
